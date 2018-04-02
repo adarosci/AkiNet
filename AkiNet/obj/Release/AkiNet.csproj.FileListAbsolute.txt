@@ -1,0 +1,9 @@
+E:\David\Visual Studio 2017\Projects\AkiNet\AkiNet\bin\Release\AkiNet.dll
+E:\David\Visual Studio 2017\Projects\AkiNet\AkiNet\bin\Release\AkiNet.pdb
+E:\David\Visual Studio 2017\Projects\AkiNet\AkiNet\bin\Release\Newtonsoft.Json.dll
+E:\David\Visual Studio 2017\Projects\AkiNet\AkiNet\bin\Release\Newtonsoft.Json.xml
+E:\David\Visual Studio 2017\Projects\AkiNet\AkiNet\obj\Release\AkiNet.csprojResolveAssemblyReference.cache
+E:\David\Visual Studio 2017\Projects\AkiNet\AkiNet\obj\Release\AkiNet.csproj.CoreCompileInputs.cache
+E:\David\Visual Studio 2017\Projects\AkiNet\AkiNet\obj\Release\AkiNet.csproj.CopyComplete
+E:\David\Visual Studio 2017\Projects\AkiNet\AkiNet\obj\Release\AkiNet.dll
+E:\David\Visual Studio 2017\Projects\AkiNet\AkiNet\obj\Release\AkiNet.pdb
