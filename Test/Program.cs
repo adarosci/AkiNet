@@ -11,7 +11,7 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            AKI.Client client = AKI.Client.StartGame();
+            AKI.Client client = AKI.Client.StartGame(AKI.Client.Language.Hebrew);
             bool GameFinished = false;
             List<ulong> DeclinedCharacters = new List<ulong>();
             while (!GameFinished)

@@ -50,6 +50,7 @@
     <Compile Include="Entities\NewGameParameters.cs" />
     <Compile Include="Entities\Question.cs" />
     <Compile Include="Exceptions\NotValidAnswerException.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

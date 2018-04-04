@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Net;
+using AkiNet;
 
 namespace AkiNet
 {
@@ -14,8 +15,9 @@ namespace AkiNet
         {
             webClient = new WebClient();
         }
-        // Base WebClient
+        // Base Variables
         private WebClient webClient;
+        private Language UsedLanguage;
 
         // Aki Base Variables
         private string session;
@@ -26,9 +28,51 @@ namespace AkiNet
         public Entities.CQuestion Question;
 
         // Read Only Variables
-        public static readonly string NEW_SESSION_URI = "http://api-en4.akinator.com/ws/new_session?partner=1&player=1";
-        public static readonly string ANSWER_QUESTION_URI = "http://api-en4.akinator.com/ws/answer?session={0}&signature={1}&step={2}&answer={3}";
-        public static readonly string LIST_GUESS_URI = "http://api-en4.akinator.com/ws/list?session={0}&signature={1}&mode_question=0&step={2}";
+        public static readonly string BASE_NEW_SESSION_URI = "http://{0}/new_session?partner=1&player=1&constraint=ETAT<>%27AV%27&";
+        public static readonly string BASE_ANSWER_QUESTION_URI = "http://{0}/answer?session={{0}}&signature={{1}}&step={{2}}&answer={{3}}";
+        public static readonly string BASE_LIST_GUESS_URI = "http://{0}/list?session={{0}}&signature={{1}}&mode_question=0&step={{2}}";
+        public static IReadOnlyDictionary<Language, string> AkiLanguagesHosts = new Dictionary<Language, string>()
+            .AddRangeEx(new Language[]
+            {
+                Language.English,
+                Language.Arabic,
+                Language.Chinese,
+                Language.German,
+                Language.Spanish,
+                Language.Frence,
+                Language.Hebrew,
+                Language.Italian,
+                Language.Japanese,
+                Language.Korean,
+                Language.Nederlands,
+                Language.Polish,
+                Language.Portuguese,
+                Language.Russian,
+                Language.Turkish,
+            }, new string[]
+            {
+                "api-en4.akinator.com/ws",
+                "api-ar3.akinator.com/ws",
+                "api-cn4.akinator.com/ws",
+                "178.33.63.63:8005/ws",
+                "api-es3.akinator.com/ws",
+                "api-fr3.akinator.com/ws",
+                "178.33.63.63:8006/ws",
+                "api-it2.akinator.com/ws",
+                "178.33.63.63:8012/ws",
+                "api-kr4.akinator.com/ws",
+                "api-nl2.akinator.com/ws",
+                "api-pl3.akinator.com/ws",
+                "api-pt4.akinator.com/ws",
+                "api-ru4.akinator.com/ws",
+                "api-tr3.akinator.com/ws"
+            });
+        public static string NEW_SESSION_URI(Language Language) =>
+            String.Format(BASE_NEW_SESSION_URI, AkiLanguagesHosts[Language]);
+        public string ANSWER_QUESTION_URI =>
+            String.Format(BASE_NEW_SESSION_URI, AkiLanguagesHosts[UsedLanguage]);
+        public string LIST_GUESS_URI =>
+            String.Format(BASE_NEW_SESSION_URI, AkiLanguagesHosts[UsedLanguage]);
 
         public enum AnswerOptions
         {
@@ -44,12 +88,30 @@ namespace AkiNet
             Guess,
             Unknown
         }
+        public enum Language
+        {
+            English,
+            Arabic,
+            Chinese,
+            German,
+            Spanish,
+            Frence,
+            Hebrew,
+            Italian,
+            Japanese,
+            Korean,
+            Nederlands,
+            Polish,
+            Portuguese,
+            Russian,
+            Turkish
+        }
 
-        public static Client StartGame()
+        public static Client StartGame(Language Language = Language.English)
         {
             Client c = new Client();
             string JSONNewGame;
-            using (var downloadStringTask = c.webClient.DownloadStringTaskAsync(NEW_SESSION_URI))
+            using (var downloadStringTask = c.webClient.DownloadStringTaskAsync(NEW_SESSION_URI(Language)))
             {
                 downloadStringTask.Wait();
                 JSONNewGame = downloadStringTask.Result;
@@ -62,6 +124,7 @@ namespace AkiNet
             c.signature = Response.Parameters.Identification.Signature;
             c.step = Response.Parameters.StepInformation.Step;
             c.Question = Response.Parameters.StepInformation;
+            c.UsedLanguage = Language;
             return c;
         }
 

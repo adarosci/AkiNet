@@ -17,38 +17,20 @@ namespace AkiNet.Entities
         public class Answer
         {
             private Answer() {}
-            public bool Yes { get; set; } = false;
-            public bool No { get; set; } = false;
-            public bool DontKnow { get; set; } = false;
-            public bool Probably { get; set; } = false;
-            public bool ProbablyNot { get; set; } = false;
+            public string Yes { get; set; }
+            public string No { get; set; }
+            public string DontKnow { get; set; }
+            public string Probably { get; set; }
+            public string ProbablyNot { get; set; }
 
             internal static Answer ParseAnswersAkiList(List<CAnswer> list)
             {
                 Answer a = new Answer();
-                foreach (CAnswer answer in list)
-                {
-                    switch (answer.Answer.ToLower())
-                    {
-                        case "yes":
-                            a.Yes = true;
-                            break;
-                        case "no":
-                            a.No = true;
-                            break;
-                        case "don't know":
-                            a.DontKnow = true;
-                            break;
-                        case "probably":
-                            a.Probably = true;
-                            break;
-                        case "probably not":
-                            a.ProbablyNot = true;
-                            break;
-                        default:
-                            throw new Exceptions.NotValidAnswerException(answer.Answer);
-                    }
-                }
+                a.Yes = list[0].Answer;
+                a.No = list[1].Answer;
+                a.DontKnow = list[2].Answer;
+                a.Probably = list[3].Answer;
+                a.ProbablyNot = list[4].Answer;
                 return a;
             }
         }
