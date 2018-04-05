@@ -1,0 +1,12 @@
+E:\David\Visual Studio 2017\Projects\AkiNet\Test\bin\Debug\Test.exe.config
+E:\David\Visual Studio 2017\Projects\AkiNet\Test\bin\Debug\Test.exe
+E:\David\Visual Studio 2017\Projects\AkiNet\Test\bin\Debug\Test.pdb
+E:\David\Visual Studio 2017\Projects\AkiNet\Test\bin\Debug\AkiNet.dll
+E:\David\Visual Studio 2017\Projects\AkiNet\Test\bin\Debug\Newtonsoft.Json.dll
+E:\David\Visual Studio 2017\Projects\AkiNet\Test\bin\Debug\AkiNet.pdb
+E:\David\Visual Studio 2017\Projects\AkiNet\Test\bin\Debug\Newtonsoft.Json.xml
+E:\David\Visual Studio 2017\Projects\AkiNet\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+E:\David\Visual Studio 2017\Projects\AkiNet\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+E:\David\Visual Studio 2017\Projects\AkiNet\Test\obj\Debug\Test.csproj.CopyComplete
+E:\David\Visual Studio 2017\Projects\AkiNet\Test\obj\Debug\Test.exe
+E:\David\Visual Studio 2017\Projects\AkiNet\Test\obj\Debug\Test.pdb
