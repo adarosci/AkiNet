@@ -11,7 +11,7 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            AKI.Client client = AKI.Client.StartGame(AKI.Client.Language.Hebrew);
+            AKI.Client client = AKI.Client.StartGame(AKI.Client.Language.Russian);
             bool GameFinished = false;
             List<ulong> DeclinedCharacters = new List<ulong>();
             while (!GameFinished)
@@ -20,29 +20,29 @@ namespace Test
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 string Answer = Console.ReadLine();
                 Console.ResetColor();
-                AKI.Client.AnswerOptions AnswerOption;
+                AKI.AnswerOptions AnswerOption;
                 switch (Answer.ToLower())
                 {
                     case "y":
                     case "yes":
-                        AnswerOption = AKI.Client.AnswerOptions.Yes;
+                        AnswerOption = AKI.AnswerOptions.Yes;
                         break;
                     case "n":
                     case "no":
-                        AnswerOption = AKI.Client.AnswerOptions.No;
+                        AnswerOption = AKI.AnswerOptions.No;
                         break;
                     case "idk":
                     case "i":
                     case "i dont know":
-                        AnswerOption = AKI.Client.AnswerOptions.DontKnow;
+                        AnswerOption = AKI.AnswerOptions.DontKnow;
                         break;
                     case "p":
                     case "probably":
-                        AnswerOption = AKI.Client.AnswerOptions.Probably;
+                        AnswerOption = AKI.AnswerOptions.Probably;
                         break;
                     case "pn":
                     case "probably not":
-                        AnswerOption = AKI.Client.AnswerOptions.ProbablyNot;
+                        AnswerOption = AKI.AnswerOptions.ProbablyNot;
                         break;
                     default:
                         Console.WriteLine("This is invalid answer.\nPlease type Yes/No/I Don't Know/Probably/Probably Not");
