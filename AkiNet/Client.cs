@@ -39,9 +39,9 @@ namespace AkiNet
         public Entities.CQuestion Question;
 
         // Read Only Variables
-        public static readonly string BASE_NEW_SESSION_URI = "http://{0}/new_session?partner=1&player=1&constraint=ETAT<>%27AV%27&";
-        public static readonly string BASE_ANSWER_QUESTION_URI = "http://{0}/answer?session={{0}}&signature={{1}}&step={{2}}&answer={{3}}";
-        public static readonly string BASE_LIST_GUESS_URI = "http://{0}/list?session={{0}}&signature={{1}}&mode_question=0&step={{2}}";
+        public static readonly string BASE_NEW_SESSION_URI = "https://{0}/ws/new_session?partner=1&player=website-desktop&constraint=ETAT<>'AV'";
+        public static readonly string BASE_ANSWER_QUESTION_URI = "https://{0}/answer?session={{0}}&signature={{1}}&step={{2}}&answer={{3}}";
+        public static readonly string BASE_LIST_GUESS_URI = "https://{0}/list?session={{0}}&signature={{1}}&mode_question=0&step={{2}}";
         public static IReadOnlyDictionary<Language, string> AkiLanguagesHosts = new Dictionary<Language, string>()
             .AddRangeEx(new Language[]
             {
@@ -74,7 +74,7 @@ namespace AkiNet
                 "api-kr4.akinator.com/ws",
                 "api-nl2.akinator.com/ws",
                 "api-pl3.akinator.com/ws",
-                "api-pt4.akinator.com/ws",
+                "srv3.akinator.com:9166",
                 "api-ru4.akinator.com/ws",
                 "api-tr3.akinator.com/ws"
             });
@@ -85,7 +85,7 @@ namespace AkiNet
         public string LIST_GUESS_URI =>
             String.Format(BASE_LIST_GUESS_URI, AkiLanguagesHosts[UsedLanguage]);
 
-        
+
         public enum AnswerReturnType
         {
             Question,
