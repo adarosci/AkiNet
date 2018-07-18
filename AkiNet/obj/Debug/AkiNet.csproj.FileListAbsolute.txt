@@ -16,3 +16,11 @@ E:\David\Visual Studio 2017\Projects\AkiNet\AkiNet\obj\Debug\AkiNet.csproj.CoreC
 E:\David\Visual Studio 2017\Projects\AkiNet\AkiNet\obj\Debug\AkiNet.csproj.CopyComplete
 E:\David\Visual Studio 2017\Projects\AkiNet\AkiNet\obj\Debug\AkiNet.dll
 E:\David\Visual Studio 2017\Projects\AkiNet\AkiNet\obj\Debug\AkiNet.pdb
+C:\Git\akinator\eu\AkiNet\AkiNet\bin\Debug\AkiNet.dll
+C:\Git\akinator\eu\AkiNet\AkiNet\bin\Debug\AkiNet.pdb
+C:\Git\akinator\eu\AkiNet\AkiNet\bin\Debug\Newtonsoft.Json.dll
+C:\Git\akinator\eu\AkiNet\AkiNet\bin\Debug\Newtonsoft.Json.xml
+C:\Git\akinator\eu\AkiNet\AkiNet\obj\Debug\AkiNet.csproj.CoreCompileInputs.cache
+C:\Git\akinator\eu\AkiNet\AkiNet\obj\Debug\AkiNet.csproj.CopyComplete
+C:\Git\akinator\eu\AkiNet\AkiNet\obj\Debug\AkiNet.dll
+C:\Git\akinator\eu\AkiNet\AkiNet\obj\Debug\AkiNet.pdb

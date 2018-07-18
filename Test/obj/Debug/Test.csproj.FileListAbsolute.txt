@@ -10,3 +10,15 @@ E:\David\Visual Studio 2017\Projects\AkiNet\Test\obj\Debug\Test.csproj.CoreCompi
 E:\David\Visual Studio 2017\Projects\AkiNet\Test\obj\Debug\Test.csproj.CopyComplete
 E:\David\Visual Studio 2017\Projects\AkiNet\Test\obj\Debug\Test.exe
 E:\David\Visual Studio 2017\Projects\AkiNet\Test\obj\Debug\Test.pdb
+C:\Git\akinator\eu\AkiNet\Test\bin\Debug\Test.exe.config
+C:\Git\akinator\eu\AkiNet\Test\bin\Debug\Test.exe
+C:\Git\akinator\eu\AkiNet\Test\bin\Debug\Test.pdb
+C:\Git\akinator\eu\AkiNet\Test\bin\Debug\AkiNet.dll
+C:\Git\akinator\eu\AkiNet\Test\bin\Debug\Newtonsoft.Json.dll
+C:\Git\akinator\eu\AkiNet\Test\bin\Debug\AkiNet.pdb
+C:\Git\akinator\eu\AkiNet\Test\bin\Debug\Newtonsoft.Json.xml
+C:\Git\akinator\eu\AkiNet\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Git\akinator\eu\AkiNet\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Git\akinator\eu\AkiNet\Test\obj\Debug\Test.csproj.CopyComplete
+C:\Git\akinator\eu\AkiNet\Test\obj\Debug\Test.exe
+C:\Git\akinator\eu\AkiNet\Test\obj\Debug\Test.pdb

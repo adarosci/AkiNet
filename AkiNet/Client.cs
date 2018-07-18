@@ -40,8 +40,8 @@ namespace AkiNet
 
         // Read Only Variables
         public static readonly string BASE_NEW_SESSION_URI = "https://{0}/ws/new_session?partner=1&player=website-desktop&constraint=ETAT<>'AV'";
-        public static readonly string BASE_ANSWER_QUESTION_URI = "https://{0}/answer?session={{0}}&signature={{1}}&step={{2}}&answer={{3}}";
-        public static readonly string BASE_LIST_GUESS_URI = "https://{0}/list?session={{0}}&signature={{1}}&mode_question=0&step={{2}}";
+        public static readonly string BASE_ANSWER_QUESTION_URI = "https://{0}/ws/answer?session={{0}}&signature={{1}}&step={{2}}&answer={{3}}";
+        public static readonly string BASE_LIST_GUESS_URI = "https://{0}/ws/list?session={{0}}&signature={{1}}&mode_question=0&step={{2}}";
         public static IReadOnlyDictionary<Language, string> AkiLanguagesHosts = new Dictionary<Language, string>()
             .AddRangeEx(new Language[]
             {
