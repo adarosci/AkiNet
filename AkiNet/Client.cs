@@ -62,21 +62,21 @@ namespace AkiNet
                 Language.Turkish,
             }, new string[]
             {
-                "api-en4.akinator.com/ws",
-                "api-ar3.akinator.com/ws",
-                "api-cn4.akinator.com/ws",
-                "178.33.63.63:8005/ws",
-                "api-es3.akinator.com/ws",
+                "srv2.akinator.com:9157",
+                "srv2.akinator.com:9155",
+                "srv5.akinator.com:9125",
+                "srv7.akinator.com:9145",
+                "srv6.akinator.com:9127",
                 "api-fr3.akinator.com/ws",
-                "178.33.63.63:8006/ws",
-                "api-it2.akinator.com/ws",
-                "178.33.63.63:8012/ws",
-                "api-kr4.akinator.com/ws",
-                "api-nl2.akinator.com/ws",
-                "api-pl3.akinator.com/ws",
+                "srv9.akinator.com:9131",
+                "srv9.akinator.com:9131",
+                "srv10.akinator.com:9120",
+                "srv2.akinator.com:9156",
+                "srv9.akinator.com:9133",
+                "srv7.akinator.com:9143",
                 "srv3.akinator.com:9166",
-                "api-ru4.akinator.com/ws",
-                "api-tr3.akinator.com/ws"
+                "srv5.akinator.com:9124",
+                "srv3.akinator.com:9164"
             });
         public static string NEW_SESSION_URI(Language Language) =>
             String.Format(BASE_NEW_SESSION_URI, AkiLanguagesHosts[Language]);
